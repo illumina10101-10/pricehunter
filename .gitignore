@@ -6,4 +6,4 @@ __pycache__/
 *.pyc
 scraper/venv/
 scraper/output/
-data/products.json
+bot/output/
