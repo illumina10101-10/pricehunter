@@ -8,6 +8,9 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.cdninstagram.com' },
       { protocol: 'https', hostname: 'ae01.alicdn.com' },
       { protocol: 'https', hostname: '**.temu.com' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: '**.staticbg.com' },
+      { protocol: 'https', hostname: '**.alicdn.com' },
     ],
   },
 }

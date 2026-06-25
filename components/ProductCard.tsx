@@ -15,14 +15,23 @@ export default function ProductCard({ product }: Props) {
   return (
     <div className="card group flex flex-col">
       {/* Image */}
-      <div className="relative aspect-square bg-gray-100 overflow-hidden">
+      <div className="relative aspect-square bg-gray-100 overflow-hidden rounded-t-lg">
         <div className="absolute top-2 left-2 z-10">
           <DiscountBadge discount={product.discount} />
         </div>
-        <div className="w-full h-full flex items-center justify-center text-gray-300 text-5xl">
-          {/* Fallback emoji per immagini demo */}
-          🛍️
-        </div>
+        {product.imageUrl ? (
+          <Image
+            src={product.imageUrl}
+            alt={product.titleIT}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-gray-300 text-5xl">
+            🛍️
+          </div>
+        )}
       </div>
 
       {/* Content */}
